@@ -1,8 +1,7 @@
 export default function Contact() {
   return (
-    <section id="contact" className="py-5">
+    <section id="contact" className="py-5 bg-light">
       <div className="container">
-        {/* Section Header */}
         <div className="text-center mb-5">
           <h2 className="fw-bold">Get In Touch</h2>
           <p className="lead text-muted">

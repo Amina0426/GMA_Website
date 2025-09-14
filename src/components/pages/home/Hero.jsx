@@ -1,14 +1,13 @@
 export default function Hero() {
   const heroStyle = {
-    // Set height to 100vh to take full viewport height
     height: "calc(100vh - 66px)",
     width: "100vw",
     position: "relative",
     overflow: "hidden",
     display: "flex",
-    alignItems: "flex-end", // Align content to the bottom
-    justifyContent: "center", // Center content horizontally
-    color: "white",
+    alignItems: "flex-end",
+    justifyContent: "center",
+    color: "black", // changed default text color
   };
 
   const videoStyle = {
@@ -19,9 +18,8 @@ export default function Hero() {
     minHeight: "100%",
     width: "auto",
     height: "auto",
-    zIndex: "-1",
+    zIndex: "0",
     transform: "translate(-50%, -50%)",
-    backgroundColor: "#343a40", // Fallback color
   };
 
   const overlayStyle = {
@@ -30,7 +28,7 @@ export default function Hero() {
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.5)", // Dark overlay
+    backgroundColor: "rgba(0, 0, 0, 0.5)",
     zIndex: "0",
   };
 
@@ -38,19 +36,19 @@ export default function Hero() {
     position: "relative",
     zIndex: "1",
     bottom: "5vh",
-    background: "none",
-    border: "2px solid white",
+    backgroundColor: "black",
+    border: "2px solid black",
     color: "white",
-    borderRadius: "50%",
-    width: "50px",
-    height: "50px",
-    fontSize: "1.5rem",
+    borderRadius: "8px", // rectangular with slightly rounded corners
+    padding: "0.6rem 1.5rem", // enough padding for text
+    fontSize: "1rem",
     cursor: "pointer",
-    transition: "background-color 0.3s, color 0.3s",
+    transition: "none",
+    minWidth: "150px", // ensures text doesn’t overflow
+    textAlign: "center",
   };
 
   const handleScrollDown = () => {
-    // Scrolls the window down by the height of the viewport
     window.scrollBy({
       top: window.innerHeight,
       left: 0,
@@ -61,30 +59,44 @@ export default function Hero() {
   return (
     <section id="home" style={heroStyle}>
       <div style={overlayStyle}></div>
+
       <video autoPlay loop muted playsInline style={videoStyle}>
-        {/* Using a placeholder video URL */}
-        <source
-          src="https://assets.mixkit.co/videos/preview/mixkit-architect-working-on-a-computer-4467-large.mp4"
-          type="video/mp4"
-        />
+        <source src="/videos/gma_video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
+      {/* Company Name and Tagline */}
+      <div
+        style={{
+          position: "absolute",
+          top: "5vh",
+          left: "50%",
+          transform: "translateX(-50%)",
+          textAlign: "center",
+          color: "black", // changed to black
+          zIndex: 2,
+        }}
+      >
+        <h1 style={{ fontSize: "3rem", margin: 0 }}>Structura Inc.in</h1>
+        <p style={{ fontSize: "1.2rem", marginTop: "0.5rem" }}>
+          Building Tomorrow, Today
+        </p>
+      </div>
+
       {/* Scroll Down Button */}
       <button
-        style={scrollButtonStyle}
+        style={{
+          ...scrollButtonStyle,
+          padding: "0.6rem 1.2rem",
+          fontSize: "1rem",
+          borderRadius: "8px",
+          cursor: "pointer",
+          zIndex: 2,
+        }}
         onClick={handleScrollDown}
-        onMouseOver={(e) => {
-          e.currentTarget.style.backgroundColor = "white";
-          e.currentTarget.style.color = "black";
-        }}
-        onMouseOut={(e) => {
-          e.currentTarget.style.backgroundColor = "transparent";
-          e.currentTarget.style.color = "white";
-        }}
         aria-label="Scroll down"
       >
-        &darr;
+        Learn More ↓
       </button>
     </section>
   );

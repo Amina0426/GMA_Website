@@ -23,8 +23,7 @@ export default function About() {
   // Frame 1 (top-left)
   const imageFrame1Style = {
     ...imageFrameBaseStyle,
-    backgroundImage:
-      "url(https://placehold.co/400x400/343A40/FFFFFF?text=Project+1)",
+    backgroundImage: "url('/images/img-1.jpg')",
     top: "0%",
     left: "25%", // move left
     zIndex: "3",
@@ -33,8 +32,7 @@ export default function About() {
   // Frame 2 (middle-right)
   const imageFrame2Style = {
     ...imageFrameBaseStyle,
-    backgroundImage:
-      "url(https://placehold.co/400x400/6C757D/FFFFFF?text=Project+2)",
+    backgroundImage: "url('/images/img-2.jpg')",
     top: "30%",
     left: "50%", // center
     zIndex: "2",
@@ -43,19 +41,24 @@ export default function About() {
   // Frame 3 (bottom-left)
   const imageFrame3Style = {
     ...imageFrameBaseStyle,
-    backgroundImage:
-      "url(https://placehold.co/400x400/ADB5BD/FFFFFF?text=Project+3)",
+    backgroundImage: "url('/images/img-3.jpg')",
     top: "60%",
     left: "25%", // back to left
     zIndex: "1",
   };
 
   return (
-    <section id="about" className="py-5" style={{ backgroundColor: "snow" }}>
+    <section id="about" className="py-5 bg-light">
       <div className="container">
+        <div className="text-center mb-5">
+          <h2 className="fs-2 fw-bold">Who We Are</h2>
+          <p className="lead text-muted">
+            Delivering structural engineering with precision and purpose.
+          </p>
+        </div>
         <div className="row align-items-center">
           <div className="col-lg-7 mb-4 mb-lg-0">
-            <h2 className="display-5 fw-bold mb-3">
+            <h2 className="display-7 fw-bold mb-3">
               Building the Future, Restoring the Past
             </h2>
             <p className="lead text-muted">
@@ -67,11 +70,27 @@ export default function About() {
               Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
               semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
               Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos himenaeos.
+              nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Deleniti doloribus commodi dicta,
+              expedita natus animi? Cumque nemo, quibusdam doloremque
+              consectetur tenetur laborum delectus omnis, tempora voluptate
+              recusandae totam. Earum, sint. Corporis consectetur nihil quos
+              dicta. Odit voluptatibus error magnam. Neque repellendus inventore
+              modi debitis laboriosam ipsa ducimus quasi expedita iusto animi
+              nulla optio totam fugit consequuntur incidunt, blanditiis nemo!
+              Mollitia? Deserunt obcaecati quod ex esse, commodi eligendi quasi
+              enim doloribus ab quo itaque animi porro debitis accusantium
+              maiores sed. Soluta, velit? Perferendis suscipit cumque hic
+              necessitatibus aliquam impedit incidunt eveniet! Blanditiis non
+              earum corrupti. Necessitatibus porro soluta doloribus! Possimus
+              modi culpa a incidunt fugiat molestiae animi excepturi maxime
+              enim, eligendi nesciunt fuga dolores blanditiis? Aliquam vero
+              harum eveniet alias rerum. Magni sed ipsa, assumenda, esse
+              eligendi at odio nihil accusantium itaque, sit pariatur rem
+              ducimus aperiam temporibus. Molestiae magni nulla nesciunt odit
+              officiis exercitationem reprehenderit minima cum repellendus,
+              reiciendis nam!
             </p>
-            <button className="btn btn-primary btn-lg mt-3">
-              Learn More About Us
-            </button>
           </div>
 
           <div className="col-lg-5">

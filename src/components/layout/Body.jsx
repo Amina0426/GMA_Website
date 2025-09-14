@@ -6,7 +6,6 @@ export default function Body() {
   return (
     <div>
       <Home />
-      <Testimonial />
     </div>
   );
 }

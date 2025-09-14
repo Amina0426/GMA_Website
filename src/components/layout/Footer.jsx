@@ -1,8 +1,7 @@
 export default function Footer() {
   const footerStyle = {
     position: "relative",
-    background:
-      "url('https://placehold.co/1920x1080/212529/FFFFFF?text=Building+Skyline')",
+    background: "url('/images/footer.jpg')",
     backgroundSize: "cover",
     backgroundPosition: "center",
     backgroundAttachment: "fixed",
@@ -30,28 +29,36 @@ export default function Footer() {
       <div style={overlayStyle}></div>
       <div className="container" style={contentStyle}>
         <div className="row">
-          {/* Column 1: About the Company */}
-          <div className="col-md-4 mb-4">
+          {/* Left Column (About + Links) */}
+          <div className="col-md-6 mb-4">
             <h5 className="fw-bold text-uppercase">Structural Designs Inc.</h5>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam.
+              nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Quaerat,
+              ipsam? Alias suscipit atque earum corporis accusamus quia sunt ut
+              possimus cumque animi. Consequatur architecto laudantium libero
+              quasi dolorum reiciendis modi! Aliquid nulla error vitae
+              molestiae, obcaecati sit fuga voluptatibus, quo, eveniet quod at.
+              Aliquid numquam exercitationem repellendus est aliquam magnam
+              inventore tenetur fugit voluptatem aut ab eum, commodi dolorum
+              quos?
             </p>
-          </div>
 
-          {/* Column 2: Quick Links */}
-          <div className="col-md-2 mb-4">
-            <h5 className="fw-bold text-uppercase">Links</h5>
+            <h5 className="fw-bold text-uppercase mt-4">Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a href="#about" className="text-white-50 text-decoration-none">
+                <a
+                  href="#about"
+                  className="text-white-50 mb-5 text-decoration-none"
+                >
                   About
                 </a>
               </li>
               <li>
                 <a
                   href="#services"
-                  className="text-white-50 text-decoration-none"
+                  className="text-white-50 mb-5 text-decoration-none"
                 >
                   Services
                 </a>
@@ -59,21 +66,21 @@ export default function Footer() {
               <li>
                 <a
                   href="#contact"
-                  className="text-white-50 text-decoration-none"
+                  className="text-white-50 mb-5 text-decoration-none"
                 >
                   Contact
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white-50 text-decoration-none">
+                <a href="#" className="text-white-50 mb-5 text-decoration-none">
                   Privacy Policy
                 </a>
               </li>
             </ul>
           </div>
 
-          {/* Column 3: Contact Info */}
-          <div className="col-md-3 mb-4">
+          {/* Right Column (Contact + Social) */}
+          <div className="col-md-6 mb-4">
             <h5 className="fw-bold text-uppercase">Contact</h5>
             <ul className="list-unstyled">
               <li className="text-white-50">123 Construction Ave, Suite 100</li>
@@ -81,12 +88,8 @@ export default function Footer() {
               <li className="text-white-50">Email: contact@structural.inc</li>
               <li className="text-white-50">Phone: (123) 456-7890</li>
             </ul>
-          </div>
 
-          {/* Column 4: Social Media */}
-          <div className="col-md-3 mb-4">
-            <h5 className="fw-bold text-uppercase">Follow Us</h5>
-            {/* Placeholder for social media icons */}
+            <h5 className="fw-bold text-uppercase mt-4">Follow Us</h5>
             <a href="#" className="text-white-50 me-2 text-decoration-none">
               [LinkedIn]
             </a>
@@ -98,6 +101,7 @@ export default function Footer() {
             </a>
           </div>
         </div>
+
         <div className="text-center text-white-50 pt-4 mt-4 border-top border-secondary">
           <small>
             &copy; {new Date().getFullYear()} Structural Designs Inc. All Rights
