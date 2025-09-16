@@ -1,0 +1,24 @@
+.award-card {
+  width: 90%;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.award-img {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #f9d976, #f39f86);
+  border-radius: 50%;
+  flex-shrink: 0;
+  box-shadow: 0 0 15px rgba(243, 159, 134, 0.7);
+  position: relative;
+}
+
+/* Text side */
+.award-text {
+  flex: 1;
+}

@@ -46,46 +46,37 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Services */}
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className={`d-flex flex-column flex-md-row align-items-stretch mb-5 ${
-              index % 2 !== 0 ? "flex-md-row-reverse" : ""
-            }`}
-            style={{ gap: "5vw" }}
-          >
-            {/* Image (no card) */}
-            <div className="d-flex justify-content-center align-items-center">
-              <div
-                className="bg-secondary text-white d-flex justify-content-center align-items-center"
-                style={{
-                  width: "180px",
-                  height: "180px",
-                  borderRadius: "10px",
-                  flexShrink: 0,
-                  backgroundImage: `url(${service.image})`,
-                  width: "200px",
-                  height: "150px",
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                  borderRadius: "8px",
-                }}
-              ></div>
-            </div>
+        {/* Services Grid */}
+        <div className="row g-4">
+          {services.map((service, index) => (
+            <div key={index} className="col-12 col-md-6">
+              <div className="card shadow-sm border-0 h-100">
+                <div className="row g-0 h-100">
+                  {/* Image */}
+                  <div className="col-4 d-flex align-items-center">
+                    <div
+                      className="w-100 h-100 rounded-start"
+                      style={{
+                        backgroundImage: `url(${service.image})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                        minHeight: "150px",
+                      }}
+                    ></div>
+                  </div>
 
-            {/* Text (in a card) */}
-            <div
-              className="card shadow-sm border-0 flex-grow-1 d-flex"
-              style={{ height: "185px" }}
-            >
-              <div className="card-body d-flex flex-column justify-content-center">
-                <h4 className="fw-bold">{service.title}</h4>
-                <p className="text-muted mb-0">{service.description}</p>
+                  {/* Text */}
+                  <div className="col-8">
+                    <div className="card-body d-flex flex-column justify-content-center">
+                      <h5 className="fw-bold">{service.title}</h5>
+                      <p className="text-muted mb-0">{service.description}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         {/* Call to Action */}
         <div className="text-center mt-5">

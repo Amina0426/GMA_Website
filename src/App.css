@@ -2,3 +2,12 @@
   height: 100vh;
   width: 100vw;
 }
+/* Hide ALL scrollbars */
+* {
+  scrollbar-width: none !important; /* Firefox */
+  -ms-overflow-style: none !important; /* IE/Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}

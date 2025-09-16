@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const projectsData = [
@@ -26,6 +26,35 @@ const projectsData = [
 
 export default function ProjectsGallery() {
   const galleryRef = useRef(null);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
+
+  const checkScroll = () => {
+    if (galleryRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = galleryRef.current;
+      setCanScrollLeft(scrollLeft > 0);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
+    }
+  };
+
+  useEffect(() => {
+    checkScroll();
+    const gallery = galleryRef.current;
+    if (gallery) {
+      gallery.addEventListener("scroll", checkScroll);
+      window.addEventListener("resize", checkScroll);
+    }
+    return () => {
+      if (gallery) gallery.removeEventListener("scroll", checkScroll);
+      window.removeEventListener("resize", checkScroll);
+    };
+  }, []);
+
+  const scrollLeft = () => {
+    if (galleryRef.current) {
+      galleryRef.current.scrollBy({ left: -320, behavior: "smooth" });
+    }
+  };
 
   const scrollRight = () => {
     if (galleryRef.current) {
@@ -33,10 +62,9 @@ export default function ProjectsGallery() {
     }
   };
 
-  const arrowStyle = {
+  const arrowBaseStyle = {
     position: "absolute",
     top: "50%",
-    right: "1rem",
     transform: "translateY(-50%)",
     fontSize: "1.8rem",
     backgroundColor: "rgba(0,0,0,0.7)",
@@ -56,7 +84,7 @@ export default function ProjectsGallery() {
 
   return (
     <section id="projects" className="py-5 bg-white position-relative">
-      <div className="container">
+      <div className="container position-relative">
         {/* Section Header */}
         <div className="text-center mb-5">
           <h2 className="fw-bold">Our Projects</h2>
@@ -96,14 +124,25 @@ export default function ProjectsGallery() {
           ))}
         </div>
 
-        {/* Scroll Arrow */}
-        <button
-          style={arrowStyle}
-          onClick={scrollRight}
-          aria-label="Scroll right"
-        >
-          &rarr;
-        </button>
+        {/* Scroll Arrows */}
+        {canScrollLeft && (
+          <button
+            style={{ ...arrowBaseStyle, left: "-20px" }}
+            onClick={scrollLeft}
+            aria-label="Scroll left"
+          >
+            ‹
+          </button>
+        )}
+        {canScrollRight && (
+          <button
+            style={{ ...arrowBaseStyle, right: "-20px" }}
+            onClick={scrollRight}
+            aria-label="Scroll right"
+          >
+            ›
+          </button>
+        )}
       </div>
     </section>
   );
