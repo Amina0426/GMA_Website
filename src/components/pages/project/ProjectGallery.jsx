@@ -1,33 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-const projectsData = [
-  {
-    title: "Skyline Tower",
-    image: "/images/project1.jpg",
-    description: "50-story modern commercial building.",
-  },
-  {
-    title: "Bridge Connect",
-    image: "/images/project2.jpg",
-    description: "State-of-the-art suspension bridge.",
-  },
-  {
-    title: "Green Eco Village",
-    image: "/images/project3.jpg",
-    description: "Sustainable residential community.",
-  },
-  {
-    title: "Urban Plaza",
-    image: "/images/project4.jpg",
-    description: "Modern urban mixed-use development.",
-  },
-];
+import { useRef, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import projectsData from "./projectsData";
 
 export default function ProjectsGallery() {
   const galleryRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
+  const navigate = useNavigate();
 
   const checkScroll = () => {
     if (galleryRef.current) {
@@ -50,17 +29,10 @@ export default function ProjectsGallery() {
     };
   }, []);
 
-  const scrollLeft = () => {
-    if (galleryRef.current) {
-      galleryRef.current.scrollBy({ left: -320, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (galleryRef.current) {
-      galleryRef.current.scrollBy({ left: 320, behavior: "smooth" });
-    }
-  };
+  const scrollLeft = () =>
+    galleryRef.current?.scrollBy({ left: -320, behavior: "smooth" });
+  const scrollRight = () =>
+    galleryRef.current?.scrollBy({ left: 320, behavior: "smooth" });
 
   const arrowBaseStyle = {
     position: "absolute",
@@ -104,11 +76,12 @@ export default function ProjectsGallery() {
             scrollbarWidth: "none",
           }}
         >
-          {projectsData.map((project, index) => (
+          {projectsData.map((project) => (
             <div
-              key={index}
+              key={project.id}
               className="card flex-shrink-0 shadow-sm border-0"
               style={{ minWidth: "300px", cursor: "pointer" }}
+              onClick={() => navigate(`/projects/${project.id}`)}
             >
               <img
                 src={project.image}
@@ -143,6 +116,16 @@ export default function ProjectsGallery() {
             ›
           </button>
         )}
+
+        {/* Call to Action */}
+        <div className="text-center mt-5">
+          <button
+            className="btn btn-primary btn-lg"
+            onClick={() => navigate("/projects")}
+          >
+            View More
+          </button>
+        </div>
       </div>
     </section>
   );

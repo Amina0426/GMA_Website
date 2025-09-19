@@ -1,11 +1,16 @@
-import React from "react";
+import { Route, Routes } from "react-router-dom";
 import Home from "../pages/home/Home";
-import Testimonial from "../pages/testimonial/Testimonial";
+import SP1 from "../pages/services/SP1";
+import ProjectDisplay from "../pages/project/ProjectDisplay";
+import P1 from "../pages/project/P1";
 
 export default function Body() {
   return (
-    <div>
-      <Home />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/service/:serviceId" element={<SP1 />} />
+      <Route path="/projects" element={<ProjectDisplay />} />
+      <Route path="/projects/:projectId" element={<P1 />} />
+    </Routes>
   );
 }
