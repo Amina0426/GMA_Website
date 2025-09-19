@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import TestiCard from "./TestiCard";
+import { useNavigate } from "react-router-dom";
 import ReviewForm from "./ReviewForm";
 import { Button } from "react-bootstrap";
 
 export default function Testimonial() {
+  const navigate = useNavigate();
   const initialTestimonials = [
     {
       name: "Jane Doe",
@@ -63,19 +65,23 @@ export default function Testimonial() {
 
           {/* Call to Action Button */}
           <div className="text-center mt-5">
-            <Button variant="outline-primary" size="lg" onClick={handleShow}>
-              Worked with us? Leave a Review
+            <Button
+              variant="outline-primary"
+              size="lg"
+              onClick={() => navigate("/contact")}
+            >
+              Wanna work with us? Contact us
             </Button>
           </div>
         </div>
       </section>
 
-      {/* The Form Modal Component */}
+      {/* The Form Modal Component
       <ReviewForm
         show={showModal}
         handleClose={handleClose}
         addTestimonial={addTestimonial}
-      />
+      /> */}
     </>
   );
 }

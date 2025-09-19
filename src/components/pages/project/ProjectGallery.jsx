@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import projectsData from "./projectsData";
+import SlideUp from "../../layout/SlideUp";
 
 export default function ProjectsGallery() {
   const galleryRef = useRef(null);
@@ -55,77 +56,79 @@ export default function ProjectsGallery() {
   };
 
   return (
-    <section id="projects" className="py-5 bg-white position-relative">
+    <section id="projects" className="py-5 bg-light position-relative">
       <div className="container position-relative">
-        {/* Section Header */}
-        <div className="text-center mb-5">
-          <h2 className="fw-bold">Our Projects</h2>
-          <p className="lead text-muted">
-            Some of our recent structural engineering and construction works.
-          </p>
-        </div>
+        <SlideUp>
+          {/* Section Header */}
+          <div className="text-center mb-5">
+            <h2 className="fw-bold">Our Projects</h2>
+            <p className="lead text-muted">
+              Some of our recent structural engineering and construction works.
+            </p>
+          </div>
 
-        {/* Projects Gallery */}
-        <div
-          className="d-flex overflow-auto"
-          ref={galleryRef}
-          style={{
-            gap: "1rem",
-            scrollBehavior: "smooth",
-            msOverflowStyle: "none",
-            scrollbarWidth: "none",
-          }}
-        >
-          {projectsData.map((project) => (
-            <div
-              key={project.id}
-              className="card flex-shrink-0 shadow-sm border-0"
-              style={{ minWidth: "300px", cursor: "pointer" }}
-              onClick={() => navigate(`/projects/${project.id}`)}
-            >
-              <img
-                src={project.image}
-                className="card-img-top"
-                alt={project.title}
-                style={{ height: "200px", objectFit: "cover" }}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{project.title}</h5>
-                <p className="card-text">{project.description}</p>
+          {/* Projects Gallery */}
+          <div
+            className="d-flex overflow-auto"
+            ref={galleryRef}
+            style={{
+              gap: "1rem",
+              scrollBehavior: "smooth",
+              msOverflowStyle: "none",
+              scrollbarWidth: "none",
+            }}
+          >
+            {projectsData.map((project) => (
+              <div
+                key={project.id}
+                className="card flex-shrink-0 shadow-sm border-0"
+                style={{ minWidth: "300px", cursor: "pointer" }}
+                onClick={() => navigate(`/projects/${project.id}`)}
+              >
+                <img
+                  src={project.image}
+                  className="card-img-top"
+                  alt={project.title}
+                  style={{ height: "200px", objectFit: "cover" }}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{project.title}</h5>
+                  <p className="card-text">{project.description}</p>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* Scroll Arrows */}
-        {canScrollLeft && (
-          <button
-            style={{ ...arrowBaseStyle, left: "-20px" }}
-            onClick={scrollLeft}
-            aria-label="Scroll left"
-          >
-            ‹
-          </button>
-        )}
-        {canScrollRight && (
-          <button
-            style={{ ...arrowBaseStyle, right: "-20px" }}
-            onClick={scrollRight}
-            aria-label="Scroll right"
-          >
-            ›
-          </button>
-        )}
+          {/* Scroll Arrows */}
+          {canScrollLeft && (
+            <button
+              style={{ ...arrowBaseStyle, left: "-20px" }}
+              onClick={scrollLeft}
+              aria-label="Scroll left"
+            >
+              ‹
+            </button>
+          )}
+          {canScrollRight && (
+            <button
+              style={{ ...arrowBaseStyle, right: "-20px" }}
+              onClick={scrollRight}
+              aria-label="Scroll right"
+            >
+              ›
+            </button>
+          )}
 
-        {/* Call to Action */}
-        <div className="text-center mt-5">
-          <button
-            className="btn btn-primary btn-lg"
-            onClick={() => navigate("/projects")}
-          >
-            View More
-          </button>
-        </div>
+          {/* Call to Action */}
+          <div className="text-center mt-5">
+            <button
+              className="btn btn-primary btn-lg"
+              onClick={() => navigate("/projects")}
+            >
+              View More
+            </button>
+          </div>
+        </SlideUp>
       </div>
     </section>
   );

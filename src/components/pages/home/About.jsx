@@ -1,3 +1,5 @@
+import SlideUp from "../../layout/SlideUp";
+
 export default function About() {
   const imageFrameContainerStyle = {
     position: "relative",
@@ -50,60 +52,62 @@ export default function About() {
   return (
     <section id="about" className="py-5 bg-light">
       <div className="container">
-        <div className="text-center mb-5">
-          <h2 className="fs-2 fw-bold">Who We Are</h2>
-          <p className="lead text-muted">
-            Delivering structural engineering with precision and purpose.
-          </p>
-        </div>
-        <div className="row align-items-center">
-          <div className="col-lg-7 mb-4 mb-lg-0">
-            <h2 className="display-7 fw-bold mb-3">
-              Building the Future, Restoring the Past
-            </h2>
+        <SlideUp>
+          <div className="text-center mb-5">
+            <h2 className="fs-2 fw-bold">Who We Are</h2>
             <p className="lead text-muted">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.
-              Nulla quis sem at nibh elementum imperdiet.
-            </p>
-            <p>
-              Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
-              semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-              Class aptent taciti sociosqu ad litora torquent per conubia
-              nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Deleniti doloribus commodi dicta,
-              expedita natus animi? Cumque nemo, quibusdam doloremque
-              consectetur tenetur laborum delectus omnis, tempora voluptate
-              recusandae totam. Earum, sint. Corporis consectetur nihil quos
-              dicta. Odit voluptatibus error magnam. Neque repellendus inventore
-              modi debitis laboriosam ipsa ducimus quasi expedita iusto animi
-              nulla optio totam fugit consequuntur incidunt, blanditiis nemo!
-              Mollitia? Deserunt obcaecati quod ex esse, commodi eligendi quasi
-              enim doloribus ab quo itaque animi porro debitis accusantium
-              maiores sed. Soluta, velit? Perferendis suscipit cumque hic
-              necessitatibus aliquam impedit incidunt eveniet! Blanditiis non
-              earum corrupti. Necessitatibus porro soluta doloribus! Possimus
-              modi culpa a incidunt fugiat molestiae animi excepturi maxime
-              enim, eligendi nesciunt fuga dolores blanditiis? Aliquam vero
-              harum eveniet alias rerum. Magni sed ipsa, assumenda, esse
-              eligendi at odio nihil accusantium itaque, sit pariatur rem
-              ducimus aperiam temporibus. Molestiae magni nulla nesciunt odit
-              officiis exercitationem reprehenderit minima cum repellendus,
-              reiciendis nam!
+              Delivering structural engineering with precision and purpose.
             </p>
           </div>
+          <div className="row align-items-center">
+            <div className="col-lg-7 mb-4 mb-lg-0">
+              <h2 className="display-7 fw-bold mb-3">
+                Building the Future, Restoring the Past
+              </h2>
+              <p className="lead text-muted">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
+                nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
+                nisi. Nulla quis sem at nibh elementum imperdiet.
+              </p>
+              <p>
+                Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
+                semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
+                Class aptent taciti sociosqu ad litora torquent per conubia
+                nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Deleniti doloribus commodi dicta,
+                expedita natus animi? Cumque nemo, quibusdam doloremque
+                consectetur tenetur laborum delectus omnis, tempora voluptate
+                recusandae totam. Earum, sint. Corporis consectetur nihil quos
+                dicta. Odit voluptatibus error magnam. Neque repellendus
+                inventore modi debitis laboriosam ipsa ducimus quasi expedita
+                iusto animi nulla optio totam fugit consequuntur incidunt,
+                blanditiis nemo! Mollitia? Deserunt obcaecati quod ex esse,
+                commodi eligendi quasi enim doloribus ab quo itaque animi porro
+                debitis accusantium maiores sed. Soluta, velit? Perferendis
+                suscipit cumque hic necessitatibus aliquam impedit incidunt
+                eveniet! Blanditiis non earum corrupti. Necessitatibus porro
+                soluta doloribus! Possimus modi culpa a incidunt fugiat
+                molestiae animi excepturi maxime enim, eligendi nesciunt fuga
+                dolores blanditiis? Aliquam vero harum eveniet alias rerum.
+                Magni sed ipsa, assumenda, esse eligendi at odio nihil
+                accusantium itaque, sit pariatur rem ducimus aperiam temporibus.
+                Molestiae magni nulla nesciunt odit officiis exercitationem
+                reprehenderit minima cum repellendus, reiciendis nam!
+              </p>
+            </div>
 
-          <div className="col-lg-5">
-            <div
-              style={imageFrameContainerStyle}
-              className="image-hover-container"
-            >
-              <div style={imageFrame1Style}></div>
-              <div style={imageFrame2Style}></div>
-              <div style={imageFrame3Style}></div>
+            <div className="col-lg-5">
+              <div
+                style={imageFrameContainerStyle}
+                className="image-hover-container"
+              >
+                <div style={imageFrame1Style}></div>
+                <div style={imageFrame2Style}></div>
+                <div style={imageFrame3Style}></div>
+              </div>
             </div>
           </div>
-        </div>
+        </SlideUp>
       </div>
     </section>
   );

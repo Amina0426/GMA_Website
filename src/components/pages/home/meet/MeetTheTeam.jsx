@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import "./meet.css";
+import SlideUp from "../../../layout/SlideUp";
 
 export default function MeetTheTeam() {
   const team = [
@@ -72,56 +73,60 @@ export default function MeetTheTeam() {
   };
 
   return (
-    <section id="team" className="py-5 bg-white">
+    <section id="team" className="py-5 bg-light">
       <div className="container position-relative">
-        <div className="text-center mb-4">
-          <h2 className="fw-bold mb-1">Meet the Team</h2>
-          <p className="text-muted mb-0">The people building your projects.</p>
-        </div>
+        <SlideUp>
+          <div className="text-center mb-4">
+            <h2 className="fw-bold mb-1">Meet the Team</h2>
+            <p className="text-muted mb-0">
+              The people building your projects.
+            </p>
+          </div>
 
-        {/* Conditionally visible arrows */}
-        {canScrollLeft && (
-          <button
-            className="team-scroll-btn team-scroll-left"
-            aria-label="Scroll left"
-            onClick={() => scrollBy(-300)}
-          >
-            ‹
-          </button>
-        )}
-        {canScrollRight && (
-          <button
-            className="team-scroll-btn team-scroll-right"
-            aria-label="Scroll right"
-            onClick={() => scrollBy(300)}
-          >
-            ›
-          </button>
-        )}
+          {/* Conditionally visible arrows */}
+          {canScrollLeft && (
+            <button
+              className="team-scroll-btn team-scroll-left"
+              aria-label="Scroll left"
+              onClick={() => scrollBy(-300)}
+            >
+              ‹
+            </button>
+          )}
+          {canScrollRight && (
+            <button
+              className="team-scroll-btn team-scroll-right"
+              aria-label="Scroll right"
+              onClick={() => scrollBy(300)}
+            >
+              ›
+            </button>
+          )}
 
-        {/* Scrollable row */}
-        <div className="team-row" ref={scrollRef}>
-          {team.map((member, idx) => (
-            <div key={idx} className="team-card-wrapper">
-              <div className="card h-100 shadow-sm border-0">
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="card-img-top team-card-img"
-                />
-                <div className="card-body">
-                  <h5 className="card-title mb-1">{member.name}</h5>
-                  <h6 className="card-subtitle mb-2 text-muted">
-                    {member.role}
-                  </h6>
-                  <p className="card-text text-muted small mb-0">
-                    {member.bio}
-                  </p>
+          {/* Scrollable row */}
+          <div className="team-row" ref={scrollRef}>
+            {team.map((member, idx) => (
+              <div key={idx} className="team-card-wrapper">
+                <div className="card h-100 shadow-sm border-0">
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="card-img-top team-card-img"
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title mb-1">{member.name}</h5>
+                    <h6 className="card-subtitle mb-2 text-muted">
+                      {member.role}
+                    </h6>
+                    <p className="card-text text-muted small mb-0">
+                      {member.bio}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </SlideUp>
       </div>
     </section>
   );
