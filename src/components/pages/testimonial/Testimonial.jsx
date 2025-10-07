@@ -69,6 +69,20 @@ export default function Testimonial() {
               variant="outline-primary"
               size="lg"
               onClick={() => navigate("/contact")}
+              style={{
+                borderColor: "#0099ee",
+                color: "#0099ee",
+                backgroundColor: "transparent",
+                transition: "all 0.3s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#0099ee";
+                e.currentTarget.style.color = "#fff";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "transparent";
+                e.currentTarget.style.color = "#0099ee";
+              }}
             >
               Wanna work with us? Contact us
             </Button>

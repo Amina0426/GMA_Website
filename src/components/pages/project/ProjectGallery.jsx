@@ -40,7 +40,7 @@ export default function ProjectsGallery() {
     top: "50%",
     transform: "translateY(-50%)",
     fontSize: "1.8rem",
-    backgroundColor: "rgba(0,0,0,0.7)",
+    backgroundColor: "#0099ee",
     color: "white",
     border: "none",
     borderRadius: "50%",
@@ -122,8 +122,13 @@ export default function ProjectsGallery() {
           {/* Call to Action */}
           <div className="text-center mt-5">
             <button
-              className="btn btn-primary btn-lg"
+              className="btn btn-lg"
               onClick={() => navigate("/projects")}
+              style={{
+                backgroundColor: "#0099ee",
+                color: "#fff",
+                border: "none",
+              }}
             >
               View More
             </button>

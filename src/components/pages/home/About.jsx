@@ -56,43 +56,42 @@ export default function About() {
           <div className="text-center mb-5">
             <h2 className="fs-2 fw-bold">Who We Are</h2>
             <p className="lead text-muted">
-              Delivering structural engineering with precision and purpose.
+              Crafting spaces that inspire, with precision, innovation, and
+              integrity.
             </p>
           </div>
           <div className="row align-items-center">
             <div className="col-lg-7 mb-4 mb-lg-0">
               <h2 className="display-7 fw-bold mb-3">
-                Building the Future, Restoring the Past
+                Designing Dreams, Building Legacies
               </h2>
               <p className="lead text-muted">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed
-                nisi. Nulla quis sem at nibh elementum imperdiet.
+                Founded in 2011 as RIMM and reimagined as GM Associates in 2020,
+                we deliver architectural brilliance, structural excellence, and
+                seamless project execution. From modern designs to expert
+                renovations, we turn visions into reality while ensuring every
+                detail is perfect.
               </p>
               <p>
-                Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue
-                semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla.
-                Class aptent taciti sociosqu ad litora torquent per conubia
-                nostra, per inceptos himenaeos. Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Deleniti doloribus commodi dicta,
-                expedita natus animi? Cumque nemo, quibusdam doloremque
-                consectetur tenetur laborum delectus omnis, tempora voluptate
-                recusandae totam. Earum, sint. Corporis consectetur nihil quos
-                dicta. Odit voluptatibus error magnam. Neque repellendus
-                inventore modi debitis laboriosam ipsa ducimus quasi expedita
-                iusto animi nulla optio totam fugit consequuntur incidunt,
-                blanditiis nemo! Mollitia? Deserunt obcaecati quod ex esse,
-                commodi eligendi quasi enim doloribus ab quo itaque animi porro
-                debitis accusantium maiores sed. Soluta, velit? Perferendis
-                suscipit cumque hic necessitatibus aliquam impedit incidunt
-                eveniet! Blanditiis non earum corrupti. Necessitatibus porro
-                soluta doloribus! Possimus modi culpa a incidunt fugiat
-                molestiae animi excepturi maxime enim, eligendi nesciunt fuga
-                dolores blanditiis? Aliquam vero harum eveniet alias rerum.
-                Magni sed ipsa, assumenda, esse eligendi at odio nihil
-                accusantium itaque, sit pariatur rem ducimus aperiam temporibus.
-                Molestiae magni nulla nesciunt odit officiis exercitationem
-                reprehenderit minima cum repellendus, reiciendis nam!
+                Our expertise spans residential, commercial, and industrial
+                projects. We don’t just provide plans; we oversee construction,
+                ensuring safety, quality, and efficiency from blueprint to final
+                brick. Every structure we create reflects our commitment to
+                innovation, durability, and aesthetic harmony.
+                <br />
+                <br />
+                At GM Associates, trust is our foundation. We collaborate
+                closely with clients, turning ideas into functional, beautiful,
+                and sustainable spaces. Our team’s passion for excellence drives
+                every project, delivering results that inspire confidence and
+                exceed expectations.
+                <br />
+                <br />
+                Whether it’s a new build, a renovation, or a restoration, we
+                combine cutting-edge design, meticulous planning, and hands-on
+                oversight to create spaces that stand the test of time. Explore
+                our work and experience the difference of a company where
+                creativity meets reliability, and visions become reality.
               </p>
             </div>
 

@@ -15,7 +15,7 @@ export default function SlideUp({ children }) {
       variants={container}
       initial="hidden"
       whileInView="show"
-      viewport={{ amount: 0.15 }}
+      viewport={{ once: true, amount: 0.15 }}
     >
       {Array.isArray(children) ? (
         children.map((child, i) => (

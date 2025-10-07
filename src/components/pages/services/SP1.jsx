@@ -1,62 +1,51 @@
-import { useParams } from "react-router-dom";
-
-const services = [
-  {
-    id: "structural-design",
-    title: "Structural Design",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio.",
-    image: "/images/img-1.jpg",
-  },
-  {
-    id: "construction-management",
-    title: "Construction Management",
-    description: "Praesent libero. Sed cursus ante dapibus diam. Sed nisi.",
-    image: "/images/img-1.jpg",
-  },
-  {
-    id: "seismic-retrofitting",
-    title: "Seismic Retrofitting",
-    description:
-      "Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum.",
-    image: "/images/img-1.jpg",
-  },
-  {
-    id: "building-permits",
-    title: "Building Permits",
-    description: "Praesent mauris. Fusce nec tellus sed augue semper porta.",
-    image: "/images/img-2.jpg",
-  },
-  {
-    id: "foundation-engineering",
-    title: "Foundation Engineering",
-    description: "Mauris massa. Vestibulum lacinia arcu eget nulla.",
-    image: "/images/img-2.jpg",
-  },
-  {
-    id: "site-inspection",
-    title: "Site Inspection",
-    description:
-      "Class aptent taciti sociosqu ad litora torquent per conubia nostra.",
-    image: "/images/img-3.jpg",
-  },
-];
+import { useParams, useNavigate } from "react-router-dom";
+import servicesData from "./servicesData";
 
 export default function SP1() {
   const { serviceId } = useParams();
-  const service = services.find((s) => s.id === serviceId);
+  const navigate = useNavigate();
+  const service = servicesData.find((s) => s.id === serviceId);
 
-  if (!service) return <div className="container py-5">Service not found.</div>;
+  if (!service)
+    return (
+      <div className="container-fluid py-5 text-center">
+        <h2>Service not found.</h2>
+      </div>
+    );
 
   return (
-    <div className="container-fluid p-5 bg-light">
+    <div className="container-fluid py-5 d-flex flex-column align-items-center text-center bg-light">
+      {/* Title */}
       <h1 className="fw-bold mb-4">{service.title}</h1>
+
+      {/* Image */}
       <img
         src={service.image}
         alt={service.title}
-        className="img-fluid rounded mb-4"
+        className="img-fluid rounded shadow-sm mb-4"
+        style={{
+          maxWidth: "700px",
+          width: "100%",
+          maxHeight: "400px",
+          objectFit: "cover",
+        }}
       />
-      <p className="lead">{service.description}</p>
+
+      {/* Description */}
+      <p
+        className="lead text-muted mb-5"
+        style={{ maxWidth: "800px", whiteSpace: "pre-line" }}
+      >
+        {service.longDescription || service.shortDescription}
+      </p>
+
+      {/* Back Button
+      <button
+        onClick={() => navigate("/services")}
+        className="btn btn-outline px-4 py-2 rounded-pill"
+      >
+        ← Back to Services
+      </button> */}
     </div>
   );
 }
