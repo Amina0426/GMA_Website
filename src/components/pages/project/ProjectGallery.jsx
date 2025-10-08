@@ -1,13 +1,15 @@
 import { useRef, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import projectsData from "./projectsData";
 import SlideUp from "../../layout/SlideUp";
+import { db } from "../../../firebase";
+import { collection, query, limit, onSnapshot } from "firebase/firestore";
 
 export default function ProjectsGallery() {
   const galleryRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
   const navigate = useNavigate();
+  const [projects, setProjects] = useState([]);
 
   const checkScroll = () => {
     if (galleryRef.current) {
@@ -16,6 +18,14 @@ export default function ProjectsGallery() {
       setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 1);
     }
   };
+  useEffect(() => {
+    const q = query(collection(db, "projects"), limit(4));
+    const unsubscribe = onSnapshot(q, (snapshot) => {
+      const proj = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
+      setProjects(proj);
+    });
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     checkScroll();
@@ -28,7 +38,7 @@ export default function ProjectsGallery() {
       if (gallery) gallery.removeEventListener("scroll", checkScroll);
       window.removeEventListener("resize", checkScroll);
     };
-  }, []);
+  }, [projects]);
 
   const scrollLeft = () =>
     galleryRef.current?.scrollBy({ left: -320, behavior: "smooth" });
@@ -78,7 +88,7 @@ export default function ProjectsGallery() {
               scrollbarWidth: "none",
             }}
           >
-            {projectsData.map((project) => (
+            {projects.map((project) => (
               <div
                 key={project.id}
                 className="card flex-shrink-0 shadow-sm border-0"

@@ -12,6 +12,8 @@ import {
 import Admin from "./components/Admin/Admin";
 import PrivateRoute from "./components/Admin/PrivateRoute";
 import Dashboard from "./components/Admin/Dashboard";
+import AddProject from "./components/Admin/AddProject";
+import ProjectsBoardAdmin from "./components/Admin/ProjectBoardAdmin";
 
 function AppContent() {
   const location = useLocation();
@@ -35,6 +37,7 @@ function AppContent() {
               </PrivateRoute>
             }
           />
+          <Route path="/admin/projects" element={<ProjectsBoardAdmin />} />
         </Routes>
       </div>
       {!isAdminRoute && <Footer />}

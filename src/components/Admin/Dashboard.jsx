@@ -49,6 +49,12 @@ export default function Dashboard() {
           >
             Back to Site
           </button>
+          <button
+            className="btn btn-outline-primary me-2"
+            onClick={() => navigate("/admin/projects")}
+          >
+            My Projects
+          </button>
           <button className="btn btn-outline-danger" onClick={handleLogout}>
             Logout
           </button>
