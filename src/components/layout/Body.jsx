@@ -5,6 +5,9 @@ import ProjectDisplay from "../pages/project/ProjectDisplay";
 import P1 from "../pages/project/P1";
 import Contact from "../pages/contact/Contact";
 import ScrollToTop from "./ScrollTop";
+import Admin from "../Admin/Admin";
+import Dashboard from "../Admin/Dashboard";
+import PrivateRoute from "../Admin/PrivateRoute";
 
 export default function Body() {
   return (

@@ -31,33 +31,26 @@ export default function Footer() {
         <div className="row">
           {/* Left Column (About + Links) */}
           <div className="col-md-6 mb-4">
-            <h5 className="fw-bold text-uppercase">Structural Designs Inc.</h5>
+            <h5 className="fw-bold text-uppercase">GM Associates</h5>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-              nec odio. Praesent libero. Sed cursus ante dapibus diam. Lorem
-              ipsum dolor, sit amet consectetur adipisicing elit. Quaerat,
-              ipsam? Alias suscipit atque earum corporis accusamus quia sunt ut
-              possimus cumque animi. Consequatur architecto laudantium libero
-              quasi dolorum reiciendis modi! Aliquid nulla error vitae
-              molestiae, obcaecati sit fuga voluptatibus, quo, eveniet quod at.
-              Aliquid numquam exercitationem repellendus est aliquam magnam
-              inventore tenetur fugit voluptatem aut ab eum, commodi dolorum
-              quos?
+              GM Associates specializes in structural design, architectural
+              planning, retrofitting, and renovation services. We combine
+              creativity with technical precision to deliver safe, efficient,
+              and visually inspiring spaces. Our goal is to provide reliable
+              engineering solutions that enhance durability, functionality, and
+              aesthetic value for every project we undertake.
             </p>
 
             <h5 className="fw-bold text-uppercase mt-4">Links</h5>
             <ul className="list-unstyled">
               <li>
-                <a
-                  href="#about"
-                  className="text-white-50 mb-5 text-decoration-none"
-                >
+                <a href="/" className="text-white-50 mb-5 text-decoration-none">
                   About
                 </a>
               </li>
               <li>
                 <a
-                  href="#services"
+                  href="/#services"
                   className="text-white-50 mb-5 text-decoration-none"
                 >
                   Services
@@ -65,15 +58,18 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/projects"
                   className="text-white-50 mb-5 text-decoration-none"
                 >
-                  Contact
+                  Projects
                 </a>
               </li>
               <li>
-                <a href="#" className="text-white-50 mb-5 text-decoration-none">
-                  Privacy Policy
+                <a
+                  href="/contact"
+                  className="text-white-50 mb-5 text-decoration-none"
+                >
+                  Contact
                 </a>
               </li>
             </ul>
@@ -83,10 +79,13 @@ export default function Footer() {
           <div className="col-md-6 mb-4">
             <h5 className="fw-bold text-uppercase">Contact</h5>
             <ul className="list-unstyled">
-              <li className="text-white-50">123 Construction Ave, Suite 100</li>
-              <li className="text-white-50">New York, NY 10001</li>
-              <li className="text-white-50">Email: contact@structural.inc</li>
-              <li className="text-white-50">Phone: (123) 456-7890</li>
+              <li className="text-white-50">#8-2-610/A/401,4th Floor</li>
+              <li className="text-white-50">
+                Silver Towers Banjara, Road #11, Banjara Hills
+              </li>
+              <li className="text-white-50">Hyderabad - 500034, Telangana</li>
+              <li className="text-white-50">Email: muneer@rimmec.com</li>
+              <li className="text-white-50">Phone: +91 95504 15657</li>
             </ul>
 
             <h5 className="fw-bold text-uppercase mt-4">Follow Us</h5>
@@ -104,8 +103,7 @@ export default function Footer() {
 
         <div className="text-center text-white-50 pt-4 mt-4 border-top border-secondary">
           <small>
-            &copy; {new Date().getFullYear()} Structural Designs Inc. All Rights
-            Reserved.
+            &copy; {new Date().getFullYear()} GM Associates All Rights Reserved.
           </small>
         </div>
       </div>
