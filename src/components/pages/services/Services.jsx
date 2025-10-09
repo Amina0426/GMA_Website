@@ -23,10 +23,9 @@ export default function Services() {
               <div
                 key={service.id}
                 className={`col-12 col-md-6 ${
-                  index === servicesData.length - 1 ? "mx-auto" : ""
+                  index === servicesData.length - 1 ? "last-card" : ""
                 }`}
                 style={{
-                  maxWidth: index === servicesData.length - 1 ? "50%" : "100%",
                   cursor: "pointer",
                 }}
                 onClick={() => navigate(`/service/${service.id}`)}

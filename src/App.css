@@ -22,3 +22,9 @@
   transform: translateY(0);
   opacity: 1;
 }
+@media (min-width: 768px) {
+  .last-card {
+    max-width: 50%;
+    margin-inline: auto;
+  }
+}

@@ -95,7 +95,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="col-lg-5">
+            <div className="col-lg-5 d-none d-lg-block">
               <div
                 style={imageFrameContainerStyle}
                 className="image-hover-container"

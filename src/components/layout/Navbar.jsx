@@ -4,9 +4,9 @@ export default function Navbar() {
   return (
     <nav
       className="navbar navbar-expand-lg navbar-dark fixed-top"
-      style={{ backgroundColor: "#020319", height: "66px" }}
+      style={{ backgroundColor: "#020319" }}
     >
-      <div className="container">
+      <div className="container-fluid">
         <a className="navbar-brand d-flex align-items-center" href="#">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export default function Navbar() {
             preserveAspectRatio="xMidYMid meet"
             style={{
               width: "180px",
-              height: "auto",
+              height: "45px",
             }}
           >
             <g
@@ -71,15 +71,21 @@ export default function Navbar() {
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        <div className="collapse navbar-collapse" id="navbarNav">
+        <div
+          className="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style={{
+            backgroundColor: "#020319",
+          }}
+        >
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <NavLink

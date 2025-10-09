@@ -83,6 +83,7 @@ export default function AdminProjectsBoard() {
                 <div className="card-body">
                   <h5 className="fw-bold">{project.title}</h5>
                   <p className="text-muted">{project.description}</p>
+                  <p className="text-muted">{project.details}</p>
                   <p>
                     <strong>Category:</strong> {project.category}
                   </p>

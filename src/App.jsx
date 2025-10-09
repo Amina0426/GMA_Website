@@ -1,4 +1,6 @@
-import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+
 import "./App.css";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
@@ -12,7 +14,6 @@ import {
 import Admin from "./components/Admin/Admin";
 import PrivateRoute from "./components/Admin/PrivateRoute";
 import Dashboard from "./components/Admin/Dashboard";
-import AddProject from "./components/Admin/AddProject";
 import ProjectsBoardAdmin from "./components/Admin/ProjectBoardAdmin";
 
 function AppContent() {
