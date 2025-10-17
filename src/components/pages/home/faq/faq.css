@@ -1,0 +1,57 @@
+#faq .accordion {
+  --bs-accordion-border-color: transparent;
+  --bs-accordion-btn-focus-box-shadow: none;
+}
+
+#faq .faq-item {
+  border: none !important;
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#faq .faq-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.06);
+}
+
+#faq .accordion-button {
+  background: #fff !important;
+  color: #262526 !important;
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+  border-radius: 0 !important;
+  transition: all 0.3s ease;
+}
+#faq .accordion-button:not(.collapsed),
+#faq .accordion-button:hover {
+  color: #0099ee !important;
+  background-color: #f0f8ff !important;
+}
+
+#faq .accordion-button::after {
+  background-image: none;
+  content: "+";
+  font-size: larger;
+  color: #262426;
+  transition: transform 0.3s ease;
+}
+
+#faq .accordion-button:not(.collapsed)::after {
+  content: "-";
+}
+
+#faq .accordion-body {
+  background: #fff;
+  color: #6c757d;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  border-top: 1px solid #e9ecef;
+  padding: 1rem 1.25rem;
+}
+
+/* Smooth expand */
+#faq .accordion-collapse {
+  transition: height 0.3s ease;
+}

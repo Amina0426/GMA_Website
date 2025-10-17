@@ -1,0 +1,103 @@
+/* Main timeline container */
+.timeline-container {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* The vertical line in the middle */
+.timeline-container::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  background-color: #0099ee;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+/* Each item in the timeline */
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+}
+
+/* The numbered bubble for each item */
+.timeline-item .timeline-bubble {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  line-height: 50px; /* Vertically center the number */
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  background-color: #0099ee;
+  border: 4px solid #f8f9fa; /* Use a light background color for the border */
+  border-radius: 50%;
+  z-index: 1;
+  top: 15px;
+}
+
+/* Positioning for items on the left */
+.timeline-item.left {
+  left: 0;
+  text-align: right; /* Align text to the right for left items */
+}
+
+/* Positioning for items on the right */
+.timeline-item.right {
+  left: 50%;
+  text-align: left; /* Align text to the left for right items */
+}
+
+/* Position the bubble for left items */
+.timeline-item.left .timeline-bubble {
+  right: -25px;
+}
+
+/* Position the bubble for right items */
+.timeline-item.right .timeline-bubble {
+  left: -25px;
+}
+
+/* Style for the text content */
+.timeline-content {
+  padding: 20px 30px;
+  position: relative;
+}
+
+.timeline-content h5 {
+  font-weight: 600;
+  color: #0099ee;
+}
+
+/* Responsive design for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  /* Move the timeline line to the left */
+  .timeline-container::after {
+    left: 31px;
+  }
+
+  /* Make all items full-width */
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+  /* Force all items to align to the left */
+  .timeline-item.left,
+  .timeline-item.right {
+    left: 0%;
+    text-align: left;
+  }
+
+  /* Reposition the bubbles to the new line position */
+  .timeline-item.left .timeline-bubble,
+  .timeline-item.right .timeline-bubble {
+    left: 6px;
+  }
+}

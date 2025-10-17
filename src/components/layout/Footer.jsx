@@ -1,3 +1,5 @@
+import Location from "./Location";
+
 export default function Footer() {
   const footerStyle = {
     position: "relative",
@@ -31,8 +33,8 @@ export default function Footer() {
         <div className="row">
           {/* Left Column (About + Links) */}
           <div className="col-md-6 mb-4">
-            <h5 className="fw-bold text-uppercase">GM Associates</h5>
-            <p>
+            <h5 className="text-white fw-bold text-uppercase">GM Associates</h5>
+            <p className="text-white">
               GM Associates specializes in structural design, architectural
               planning, retrofitting, and renovation services. We combine
               creativity with technical precision to deliver safe, efficient,
@@ -43,31 +45,34 @@ export default function Footer() {
 
             <h5 className="fw-bold text-uppercase mt-4">Links</h5>
             <ul className="list-unstyled">
-              <li>
-                <a href="/" className="text-white-50 mb-5 text-decoration-none">
+              <li className="mb-2">
+                <a
+                  href="/"
+                  className="text-white text-decoration-none hover-link"
+                >
                   About
                 </a>
               </li>
-              <li>
+              <li className="mb-2">
                 <a
                   href="/#services"
-                  className="text-white-50 mb-5 text-decoration-none"
+                  className="text-white text-decoration-none hover-link"
                 >
                   Services
                 </a>
               </li>
-              <li>
+              <li className="mb-2">
                 <a
                   href="/projects"
-                  className="text-white-50 mb-5 text-decoration-none"
+                  className="text-white text-decoration-none hover-link"
                 >
                   Projects
                 </a>
               </li>
-              <li>
+              <li className="mb-2">
                 <a
                   href="/contact"
-                  className="text-white-50 mb-5 text-decoration-none"
+                  className="text-white text-decoration-none hover-link"
                 >
                   Contact
                 </a>
@@ -76,19 +81,26 @@ export default function Footer() {
           </div>
 
           {/* Right Column (Contact + Social) */}
-          <div className="col-md-6 mb-4">
-            <h5 className="fw-bold text-uppercase">Contact</h5>
+          <div className="col-md-6 mb-4 text-end">
+            <h5 className="fw-bold text-uppercase text-white">Contact</h5>
             <ul className="list-unstyled">
+              <li className="mb-1 fs-6 fw-bold text-white">Address: </li>
+              <li className="my-2">
+                <Location />
+              </li>
               <li className="text-white-50">#8-2-610/A/401,4th Floor</li>
               <li className="text-white-50">
                 Silver Towers Banjara, Road #11, Banjara Hills
               </li>
               <li className="text-white-50">Hyderabad - 500034, Telangana</li>
+              <br></br>
               <li className="text-white-50">Email: muneer@rimmec.com</li>
               <li className="text-white-50">Phone: +91 95504 15657</li>
             </ul>
 
-            <h5 className="fw-bold text-uppercase mt-4">Follow Us</h5>
+            <h5 className="fw-bold fs-6 text-white text-uppercase mt-4">
+              Follow Us
+            </h5>
             <a href="#" className="text-white-50 me-2 text-decoration-none">
               [LinkedIn]
             </a>

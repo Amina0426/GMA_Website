@@ -10,6 +10,7 @@ import SlideUp from "../../layout/SlideUp";
 
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import FAQ from "./faq/FAQ";
 
 export default function Home() {
   const { hash } = useLocation();
@@ -29,8 +30,8 @@ export default function Home() {
       <MeetTheTeam />
       <Services />
       <ProjectGallery />
-      <Awards />
       <Testimonial />
+      <FAQ />
     </>
   );
 }

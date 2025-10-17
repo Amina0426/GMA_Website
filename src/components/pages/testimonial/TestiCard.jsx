@@ -46,7 +46,7 @@ const getCardStyles = () => (
 export default function TestiCard({ name, review, stars }) {
   return (
     <>
-      {getCardStyles()} {/* call the function here */}
+      {getCardStyles()}
       <div className="card shadow-sm testimonial-card">
         <div className="card-body p-4">
           <div className="quote-icon">“</div>

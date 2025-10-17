@@ -91,7 +91,7 @@ export default function ProjectsGallery() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="card flex-shrink-0 shadow-sm border-0"
+                className="card card-hover flex-shrink-0 shadow-sm border-0"
                 style={{ minWidth: "300px", cursor: "pointer" }}
                 onClick={() => navigate(`/projects/${project.id}`)}
               >

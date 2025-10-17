@@ -30,7 +30,7 @@ export default function Services() {
                 }}
                 onClick={() => navigate(`/service/${service.id}`)}
               >
-                <div className="card shadow-sm border-0 h-100">
+                <div className="card card-hover shadow-sm border-0 h-100">
                   <div className="row g-0 h-100">
                     {/* Image */}
                     <div className="col-4 d-flex align-items-center">

@@ -25,7 +25,7 @@ export default function About() {
   // Frame 1 (top-left)
   const imageFrame1Style = {
     ...imageFrameBaseStyle,
-    backgroundImage: "url('/images/img-1.jpg')",
+    backgroundImage: "url('/images/masjid.jpg')",
     top: "0%",
     left: "25%", // move left
     zIndex: "3",
@@ -34,7 +34,7 @@ export default function About() {
   // Frame 2 (middle-right)
   const imageFrame2Style = {
     ...imageFrameBaseStyle,
-    backgroundImage: "url('/images/img-2.jpg')",
+    backgroundImage: "url('/images/img-5.jpg')",
     top: "30%",
     left: "50%", // center
     zIndex: "2",
@@ -43,7 +43,7 @@ export default function About() {
   // Frame 3 (bottom-left)
   const imageFrame3Style = {
     ...imageFrameBaseStyle,
-    backgroundImage: "url('/images/img-3.jpg')",
+    backgroundImage: "url('/images/img-6.jpg')",
     top: "60%",
     left: "25%", // back to left
     zIndex: "1",
