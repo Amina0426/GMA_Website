@@ -12,7 +12,7 @@ const servicesData = [
       Our team ensures every plan complies with local regulations, site constraints, and sustainability principles. 
       Whether it's residential, commercial, or institutional — we ensure a perfect balance of design and functionality.
     `,
-    image: "/images/img-1.jpg",
+    image: "/images/service-1.jpg",
   },
   {
     id: "structural-designs",
@@ -24,7 +24,7 @@ const servicesData = [
       We ensure structural integrity and durability through advanced modeling and software simulations. 
       Every design adheres to relevant building codes and safety standards, minimizing material costs while maximizing strength and efficiency.
     `,
-    image: "/images/img-2.jpg",
+    image: "/images/service-2.jpg",
   },
   {
     id: "structural-retrofitting",
@@ -36,7 +36,7 @@ const servicesData = [
       Our retrofitting solutions include adding new members, carbon fiber wrapping, jacketing, and seismic strengthening. 
       Each project starts with a detailed structural audit to identify vulnerabilities, followed by tailored reinforcement plans using modern techniques.
     `,
-    image: "/images/img-3.jpg",
+    image: "/images/service-3.jpg",
   },
   {
     id: "renovations",
@@ -48,7 +48,7 @@ const servicesData = [
       We manage all aspects — from design updates and space optimization to material upgrades and execution. 
       Whether it’s interior remodeling or complete building refurbishment, we prioritize functionality, safety, and client satisfaction throughout the process.
     `,
-    image: "/images/img-4.jpg",
+    image: "/images/service-4.jpg",
   },
   {
     id: "construction",
@@ -60,7 +60,7 @@ const servicesData = [
       Our team oversees planning, site supervision, material procurement, and quality control at every stage. 
       With a focus on precision and accountability, we deliver durable structures that meet both engineering and aesthetic expectations.
     `,
-    image: "/images/img-1.jpg",
+    image: "/images/service-5.jpg",
   },
 ];
 

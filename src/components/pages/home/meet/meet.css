@@ -1,4 +1,13 @@
+#team {
+  overflow-x: hidden;
+}
+#team .container {
+  padding-left: 0;
+  padding-right: 0;
+}
 .team-row {
+  margin: 0 auto;
+  padding: 1rem;
   display: flex;
   gap: 1.25rem;
   overflow-x: auto;
@@ -55,7 +64,7 @@
 
 /* Place on left and right */
 .team-scroll-left {
-  left: -20px; /* adjust depending on container padding */
+  left: -20px;
 }
 .team-scroll-right {
   right: -20px;

@@ -5,39 +5,40 @@ import SlideUp from "../../../layout/SlideUp";
 export default function MeetTheTeam() {
   const team = [
     {
-      name: "Aisha Khan",
-      role: "Lead Structural Engineer",
-      img: "/images/team-1.jpg",
+      name: "Shaik Muneer Hussain",
+      role: "Chief Structural Engineer",
+      education: "M.Tech (Structures)",
+      img: "/images/person.jpg",
       bio: "10+ years designing resilient buildings and retrofits.",
     },
     {
       name: "Rahul Verma",
       role: "Project Manager",
-      img: "/images/team-2.jpg",
+      img: "/images/person.jpg",
       bio: "Coordinates multidisciplinary teams and client delivery.",
     },
     {
       name: "Priya Singh",
       role: "Seismic Specialist",
-      img: "/images/team-3.jpg",
+      img: "/images/person.jpg",
       bio: "Focus on seismic assessment & retrofit strategy.",
     },
     {
       name: "Omar Patel",
       role: "Site Inspector",
-      img: "/images/team-4.jpg",
+      img: "/images/person.jpg",
       bio: "On-site quality control & safety lead.",
     },
     {
       name: "Nina Rao",
       role: "Permits & Compliance",
-      img: "/images/team-5.jpg",
+      img: "/images/person.jpg",
       bio: "Handles approvals and regulatory compliance.",
     },
     {
       name: "Sameer Ali",
       role: "Foundation Engineer",
-      img: "/images/team-6.jpg",
+      img: "/images/person.jpg",
       bio: "Groundworks, soil reports and foundation design.",
     },
   ];

@@ -1,9 +1,3 @@
-.location-footer-wrapper {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .location-link {
   display: inline-flex;
   align-items: center;

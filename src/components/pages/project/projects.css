@@ -1,0 +1,7 @@
+#projects {
+  overflow-x: hidden;
+}
+#projects .container {
+  padding-left: 0;
+  padding-right: 0;
+}

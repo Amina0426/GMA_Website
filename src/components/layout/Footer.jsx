@@ -17,7 +17,7 @@ export default function Footer() {
     left: 0,
     width: "100%",
     height: "100%",
-    backgroundColor: "rgba(0, 0, 0, 0.8)",
+    backgroundColor: "rgba(0, 0, 0, 0.75)",
     zIndex: 1,
   };
 
@@ -30,11 +30,13 @@ export default function Footer() {
     <footer style={footerStyle}>
       <div style={overlayStyle}></div>
       <div className="container" style={contentStyle}>
-        <div className="row">
+        <div className="row gy-4 align-items-start">
           {/* Left Column (About + Links) */}
-          <div className="col-md-6 mb-4">
-            <h5 className="text-white fw-bold text-uppercase">GM Associates</h5>
-            <p className="text-white">
+          <div className="col-md-6 text-md-start text-center">
+            <h5 className="text-white fw-bold text-uppercase mb-3">
+              GM Associates
+            </h5>
+            <p className="text-white-50">
               GM Associates specializes in structural design, architectural
               planning, retrofitting, and renovation services. We combine
               creativity with technical precision to deliver safe, efficient,
@@ -43,7 +45,9 @@ export default function Footer() {
               aesthetic value for every project we undertake.
             </p>
 
-            <h5 className="fw-bold text-uppercase mt-4">Links</h5>
+            <h5 className=" text-white fw-semibold text-uppercase mt-4">
+              Quick Links
+            </h5>
             <ul className="list-unstyled">
               <li className="mb-2">
                 <a
@@ -81,20 +85,20 @@ export default function Footer() {
           </div>
 
           {/* Right Column (Contact + Social) */}
-          <div className="col-md-6 mb-4 text-end">
+          <div className="col-md-6 text-md-end text-center">
             <h5 className="fw-bold text-uppercase text-white">Contact</h5>
             <ul className="list-unstyled">
               <li className="mb-1 fs-6 fw-bold text-white">Address: </li>
               <li className="my-2">
                 <Location />
               </li>
-              <li className="text-white-50">#8-2-610/A/401,4th Floor</li>
+              <li className="text-white-50">#8-2-610/A/401</li>
               <li className="text-white-50">
-                Silver Towers Banjara, Road #11, Banjara Hills
+                4th Floor, Silver Towers Banjara
               </li>
+              <li className="text-white-50">Rd No 11, Banjara Hills</li>
               <li className="text-white-50">Hyderabad - 500034, Telangana</li>
-              <br></br>
-              <li className="text-white-50">Email: muneer@rimmec.com</li>
+              <li className="mt-3 text-white-50">Email: muneer@rimmec.com</li>
               <li className="text-white-50">Phone: +91 95504 15657</li>
             </ul>
 
